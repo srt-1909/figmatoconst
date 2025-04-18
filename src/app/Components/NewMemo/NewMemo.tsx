@@ -1,0 +1,48 @@
+"use client";
+import { useEffect, useState } from 'react';
+import Head from 'next/head';
+import Navbar from '../Navbar/Navbar';
+import Header from '../ReauseComp/Header';
+import FilesUploaded from './FileUpload';
+import NewMemoUpload from './NewMemoUpload';
+
+export default function Upload() {
+
+
+    const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // change this to your actual loading logic
+
+    return () => clearTimeout(timer);
+  }, []);
+
+
+  return (
+    <div className="min-h-screen bg-white ">
+    
+
+       <Navbar/>
+      <div className="px-8 py-8">
+      <Header/>
+
+        
+  {isLoading? ( <div className="flex items-center flex-col justify-center h-96 bg-white">
+     
+        <img src="loading.png"></img>
+        <p className="mt-2 text-sm text-gray-600">Loading...</p>
+      </div>
+      ) : (
+
+    // <NewMemoUpload/>
+    <FilesUploaded/>    
+    )
+        
+    }
+      </div>
+    </div>
+  );
+}
