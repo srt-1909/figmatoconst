@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface SupplyData {
@@ -21,31 +22,29 @@ interface ComparableData {
 }
 
 const SupplyItem = ({ data }: { data: SupplyData }) => (
-  <div className="w-[30%] flex border-r-1 border-r-[#E4E4E7]">
-    <div className="flex space-x-4">
-      <img
-        src={data.image}
-        alt={data.address}
-        className="rounded-[8px] h-[140px] w-[161px] object-cover"
-      />
-      <div className="flex flex-col text-sm">
-        <div><span className="font-semibold">Address:</span> {data.address}</div>
-        <div><span className="font-semibold">Submarket:</span> {data.submarket}</div>
-        <div><span className="font-semibold">Delivery Date:</span> {data.deliveryDate}</div>
-        <div><span className="font-semibold">Owner:</span> {data.owner}</div>
-        <div><span className="font-semibold">SF:</span> {data.sf}</div>
-      </div>
+  <div className="flex space-x-4">
+    <img
+      src={data.image}
+      alt={data.address}
+      className="rounded-lg h-36 w-40 object-cover"
+    />
+    <div className="flex flex-col text-sm">
+      <div><span className="font-semibold">Address:</span> {data.address}</div>
+      <div><span className="font-semibold">Submarket:</span> {data.submarket}</div>
+      <div><span className="font-semibold">Delivery Date:</span> {data.deliveryDate}</div>
+      <div><span className="font-semibold">Owner:</span> {data.owner}</div>
+      <div><span className="font-semibold">SF:</span> {data.sf}</div>
     </div>
   </div>
 );
 
 const ComparableItem = ({ data }: { data: ComparableData }) => (
-  <div className="w-[50%] flex">
+  <div className="w-1/2 flex">
     <div className="flex space-x-4">
       <img
         src={data.image}
         alt={data.address}
-        className="rounded-[8px] h-[140px] w-[161px] object-cover"
+        className="rounded-lg h-36 w-40 object-cover"
       />
       <div className="flex flex-col text-sm">
         <div><span className="font-semibold">Address:</span> {data.address}</div>
@@ -128,25 +127,38 @@ export default function SupplyPipeline() {
   ];
 
   return (
-    <div className="flex flex-col space-y-6  overflow-hidden  ">
-      {/* Header */}
+    <div className="flex flex-col space-y-6 overflow-hidden">
       
-      <div className="flex w-full ">
-        <div className="w-[30%] font-bold text-xl ">Supply Pipeline</div>
-        <div className="w-[70%] font-bold text-xl">Sale Comparables</div>
-      </div>
-
-      {/* Rows */}
-      {supplyData.map((supply, index) => (
-        <div key={index} className="flex w-full space-x-4 ">
+      <div className="flex w-full">
+       
+        <div className="w-3/10 border-r border-gray-200 pr-4">
+       
+          <div className="font-bold text-xl mb-6">Supply Pipeline</div>
           
-          <SupplyItem data={supply} />
-          
-          {comparableData[index].map((comp, idx) => (
-            <ComparableItem key={idx} data={comp} />
-          ))}
+         
+          <div className="flex flex-col space-y-6">
+            {supplyData.map((supply, index) => (
+              <SupplyItem key={index} data={supply} />
+            ))}
+          </div>
         </div>
-      ))}
+      
+        <div className="w-7/10 pl-4">
+     
+          <div className="font-bold text-xl mb-6">Sale Comparables</div>
+          
+  
+          <div className="flex flex-col space-y-6">
+            {supplyData.map((_, index) => (
+              <div key={index} className="flex w-full">
+                {comparableData[index].map((comp, idx) => (
+                  <ComparableItem key={idx} data={comp} />
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -25,7 +25,7 @@ export default function Upload() {
     <div className="min-h-screen bg-white ">
     
 
-       <Navbar pageType="newmemo"  navLinks={["New Upload", "Pipeline", "Settings"]}/>
+       <Navbar  navLinks={["New Upload", "Pipeline", "Settings"]}/>
       <div className="px-8 py-8">
       <Header title="Upload New Deal"/>
 

@@ -2,7 +2,7 @@ import Head from "next/head";
 
 
 interface NavbarProps {
-  pageType: string;
+  pageType?: string;
   navLinks: string[];
 }
 
