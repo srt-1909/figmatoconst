@@ -1,5 +1,5 @@
 // components/FilesUploaded.tsx
-import React, { JSX } from 'react';
+import React, { JSX, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 // Define types for our component props and file objects
 interface UploadedFile {
@@ -46,6 +46,18 @@ export default function FilesUploaded({
     }
   };
   const router = useRouter();
+
+  const [isLoading, setIsLoading] = useState(true);
+  
+    useEffect(() => {
+      
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+      }, 2000); // change this to your actual loading logic
+  
+      return () => clearTimeout(timer);
+    }, []);
+  
   const handleSubmit = (): void => {
     // Here you can implement your Multer upload logic
     const formData = new FormData();
@@ -62,6 +74,16 @@ export default function FilesUploaded({
 
   return (
     <div className="flex flex-col items-center justify-center py-10">
+
+
+
+
+{isLoading? ( <div className="flex items-center flex-col justify-center h-96 bg-white">
+     
+     <img src="loading.png"   className="animate-spin " ></img>
+     <p className="mt-2 text-sm text-gray-600">Loading...</p>
+   </div>
+   ):(
       <div className="w-full max-w-md">
         <p className="mb-3 text-lg font-medium text-[#71717A]">Files Uploaded:</p>
         
@@ -110,7 +132,7 @@ export default function FilesUploaded({
             </button>
           </div>
         </div>
-      </div>
+      </div>)}
     </div>
   );
 }
