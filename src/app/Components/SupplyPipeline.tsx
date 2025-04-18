@@ -21,14 +21,14 @@ interface ComparableData {
 }
 
 const SupplyItem = ({ data }: { data: SupplyData }) => (
-  <div className="w-1/2 flex">
+  <div className="w-[30%] flex">
     <div className="flex space-x-4">
       <img
         src={data.image}
         alt={data.address}
         className="rounded-[8px] h-[140px] w-[161px] object-cover"
       />
-      <div className="flex flex-col">
+      <div className="flex flex-col text-sm">
         <div><span className="font-semibold">Address:</span> {data.address}</div>
         <div><span className="font-semibold">Submarket:</span> {data.submarket}</div>
         <div><span className="font-semibold">Delivery Date:</span> {data.deliveryDate}</div>
@@ -40,14 +40,14 @@ const SupplyItem = ({ data }: { data: SupplyData }) => (
 );
 
 const ComparableItem = ({ data }: { data: ComparableData }) => (
-  <div className="w-1/2 flex">
+  <div className="w-[50%] flex">
     <div className="flex space-x-4">
       <img
         src={data.image}
         alt={data.address}
         className="rounded-[8px] h-[140px] w-[161px] object-cover"
       />
-      <div className="flex flex-col">
+      <div className="flex flex-col text-sm">
         <div><span className="font-semibold">Address:</span> {data.address}</div>
         <div><span className="font-semibold">Submarket:</span> {data.submarket}</div>
         <div><span className="font-semibold">Date:</span> {data.date}</div>
@@ -131,19 +131,17 @@ export default function SupplyPipeline() {
     <div className="flex flex-col space-y-6 w-[1448px] h-[468px] overflow-hidden">
       {/* Header */}
       <div className="flex w-full border-b pb-2">
-        <div className="w-1/2 font-bold text-xl">Supply Pipeline</div>
-        <div className="w-1/2 font-bold text-xl">Sale Comparables</div>
+        <div className="w-[30%] font-bold text-xl">Supply Pipeline</div>
+        <div className="w-[70%] font-bold text-xl">Sale Comparables</div>
       </div>
 
       {/* Rows */}
       {supplyData.map((supply, index) => (
-        <div key={index} className="flex w-full">
+        <div key={index} className="flex w-full space-x-4">
           <SupplyItem data={supply} />
-          <div className="w-1/2 flex space-x-4">
-            {comparableData[index].map((comp, idx) => (
-              <ComparableItem key={idx} data={comp} />
-            ))}
-          </div>
+          {comparableData[index].map((comp, idx) => (
+            <ComparableItem key={idx} data={comp} />
+          ))}
         </div>
       ))}
     </div>

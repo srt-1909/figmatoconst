@@ -38,7 +38,7 @@ function Number() {
   return (
     <div className="flex items-center justify-center bg-gray-50">
       <div
-        className="bg-white rounded-xl shadow-lg overflow-auto"
+        className="bg-white rounded-xl  overflow-auto"
         style={{ width: '1448px', height: '372px' }}
       >
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 p-6">
