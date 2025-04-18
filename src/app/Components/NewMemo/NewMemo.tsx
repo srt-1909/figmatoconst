@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState } from 'react';
-import Head from 'next/head';
 import Navbar from '../Navbar/Navbar';
 import Header from '../ReauseComp/Header';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import FilesUploaded from './FileUpload';
 import NewMemoUpload from './NewMemoUpload';
 
@@ -37,8 +37,8 @@ export default function Upload() {
       </div>
       ) : (
 
-    // <NewMemoUpload/>
-    <FilesUploaded/>    
+    <NewMemoUpload/>
+    // <FilesUploaded/>    
     )
         
     }
