@@ -43,7 +43,7 @@ export default function Navbar({ pageType,navLinks }: NavbarProps) {
 
         
         <div className="flex">
-         <img src="starboard.png" alt="Starboard Logo" className="" />
+         <img src="24a55148-6c38-40de-a51e-9fcf59c0e5e8.svg" alt="Starboard Logo" className="" />
         </div>
       </div>
       </div>
