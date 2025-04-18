@@ -22,15 +22,18 @@ export default function ImageSummary() {
 <ul className="space-y-2 text-black">
   <li className="flex items-start">
     <span className="font-medium mr-1">•</span> 
-    <span>Jake Klein viewed this deal in 2019, but decided not to proceed due to <span className="text-blue-600">lack of potential upside</span>.</span>
+    <span>Jake Klein viewed this deal in 2019, but decided not to proceed due to <span className="underline" style={{ color: '#0001EF', textDecorationColor: '#0001EF' }}>
+  lack of potential upside
+</span>
+    .</span>
   </li>
   <li className="flex items-start">
     <span className="font-medium mr-1">•</span>
-    <span>On 10/19/2021, your firm bid on <span className="text-blue-600">55 Bay St, Brooklyn, NY 11231</span>, a large site also occupied by Amazon 0.5 miles away. <span className="text-blue-600">Brookfield won the deal for $45M</span>; cap rates in the area have compressed 45bps since then.</span>
+    <span>On 10/19/2021, your firm bid on <span className="underline" style={{ color: '#0001EF', textDecorationColor: '#0001EF' }}>55 Bay St, Brooklyn, NY 11231</span>, a large site also occupied by Amazon 0.5 miles away. <span className="underline" style={{ color: '#0001EF', textDecorationColor: '#0001EF' }}>Brookfield won the deal for $45M</span>; cap rates in the area have compressed 45bps since then.</span>
   </li>
   <li className="flex items-start">
     <span className="font-medium mr-1">•</span>
-    <span>On 01/19/2025, Tom, VP of Research, noted in the Investment Committee meeting that congestion pricing has driven <span className="text-blue-600">renewed demand for infill industrial in Brooklyn</span>.</span>
+    <span>On 01/19/2025, Tom, VP of Research, noted in the Investment Committee meeting that congestion pricing has driven <span className="underline" style={{ color: '#0001EF', textDecorationColor: '#0001EF' }}>renewed demand for infill industrial in Brooklyn</span>.</span>
   </li>
 </ul>
       </div>
