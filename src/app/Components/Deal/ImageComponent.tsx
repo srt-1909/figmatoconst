@@ -2,13 +2,13 @@ import React from 'react';
 
 export const ImageComponent = () => {
   const statItems = [
-    { icon: "/person-standing.png", label: "Seller", value: "Thor Equities" },
-    { icon: "dollar-sign.png", label: "Guidance Price", value: "$143,000,000" },
-    { icon: "dollar-sign.png", label: "Guidance Price PSF", value: "$23.92" },
-    { icon: "ruler.png", label: "Cap Rate", value: "5.0%" },
-    { icon: "ruler.png", label: "Property Size", value: "312,000 sqft" },
-    { icon: "scan.png", label: "Land Area", value: "16 acres" },
-    { icon: "", label: "Zoning", value: "M-2" }
+    { icon: "/person.svg", label: "Seller", value: "Thor Equities" },
+    { icon: "/doller.svg", label: "Guidance Price", value: "$143,000,000" },
+    { icon: "/doller.svg", label: "Guidance Price PSF", value: "$23.92" },
+    { icon: "/scale.svg", label: "Cap Rate", value: "5.0%" },
+    { icon: "/scale.svg", label: "Property Size", value: "312,000 sqft" },
+    { icon: "/scan.svg", label: "Land Area", value: "16 acres" },
+    { icon: "/hammer.svg", label: "Zoning", value: "M-2" }
   ];
 
   return (
@@ -51,8 +51,8 @@ export const ImageComponent = () => {
             <div className="flex justify-between items-start">
               {statItems.map((item, index) => (
                 <div key={index} className="flex flex-col items-center text-center px-2">
-                  <div className="text-gray-600 text-xs mb-1 flex items-center">
-                    <span className="mr-1">{item.icon}</span>
+                  <div className="text-gray-600 text-xs mb-1 flex items-center gap-1">
+                    <img src={item.icon} alt="img" className=""></img>
                     <span>{item.label}</span>
                   </div>
                   <div className="text-gray-800 text-sm font-medium">

@@ -1,10 +1,10 @@
 import Header1 from "../Header1";
-import ImageComponent from "../ImageComponent";
-import ImageSummary from "../ImageSummary";
+import ImageComponent from "./ImageComponent";
+import ImageSummary from "./ImageSummary";
 import Navbar from "../Navbar/Navbar";
-import Number from "../Number";
+import Number from "./Number";
 import Header from "../ReauseComp/Header";
-import SupplyPipeline from "../SupplyPipeline";
+import SupplyPipeline from "./SupplyPipeline";
 
 export default function Deal(){
 
