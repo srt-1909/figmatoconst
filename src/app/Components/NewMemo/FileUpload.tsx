@@ -1,6 +1,6 @@
 // components/FilesUploaded.tsx
 import React, { JSX } from 'react';
-
+import { useRouter } from 'next/navigation';
 // Define types for our component props and file objects
 interface UploadedFile {
   name: string;
@@ -45,7 +45,7 @@ export default function FilesUploaded({
       return "file.png"; // Generic file icon
     }
   };
-
+  const router = useRouter();
   const handleSubmit = (): void => {
     // Here you can implement your Multer upload logic
     const formData = new FormData();
@@ -53,14 +53,11 @@ export default function FilesUploaded({
       formData.append('files', fileObj.file);
     });
     
-    // Then send to your backend
-    // const response = await fetch('/api/upload', {
-    //   method: 'POST',
-    //   body: formData
-    // });
-
-    // Call the onSubmit prop if provided
+   
     if (onSubmit) onSubmit(formData);
+    router.push('/deal');
+
+
   };
 
   return (

@@ -105,7 +105,7 @@ export default function NewMemoUpload(): JSX.Element {
             <button type="button" className="ml-1 font-semibold">Browse</button>
           </div>
           
-          {/* Hidden file input that gets triggered when the area is clicked */}
+         
           <input
             type="file"
             multiple

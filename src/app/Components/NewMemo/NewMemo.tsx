@@ -32,7 +32,7 @@ export default function Upload() {
         
   {isLoading? ( <div className="flex items-center flex-col justify-center h-96 bg-white">
      
-        <img src="loading.png"></img>
+        <img src="loading.png"   className="animate-spin " ></img>
         <p className="mt-2 text-sm text-gray-600">Loading...</p>
       </div>
       ) : (
