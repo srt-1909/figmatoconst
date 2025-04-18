@@ -2,17 +2,17 @@ import React from 'react';
 
 export const ImageComponent = () => {
   const statItems = [
-    { icon: "👤", label: "Seller", value: "Thor Equities" },
-    { icon: "$", label: "Guidance Price", value: "$143,000,000" },
-    { icon: "$", label: "Guidance Price PSF", value: "$23.92" },
-    { icon: "📊", label: "Cap Rate", value: "5.0%" },
-    { icon: "📏", label: "Property Size", value: "312,000 sqft" },
-    { icon: "🗺️", label: "Land Area", value: "16 acres" },
-    { icon: "📍", label: "Zoning", value: "M-2" }
+    { icon: "/person-standing.png", label: "Seller", value: "Thor Equities" },
+    { icon: "dollar-sign.png", label: "Guidance Price", value: "$143,000,000" },
+    { icon: "dollar-sign.png", label: "Guidance Price PSF", value: "$23.92" },
+    { icon: "ruler.png", label: "Cap Rate", value: "5.0%" },
+    { icon: "ruler.png", label: "Property Size", value: "312,000 sqft" },
+    { icon: "scan.png", label: "Land Area", value: "16 acres" },
+    { icon: "", label: "Zoning", value: "M-2" }
   ];
 
   return (
-    <div className="w-[1448px] min-h-[246px] mx-auto p-4 bg-white rounded-lg shadow">
+    <div className="mx-auto p-4 bg-white  border-b-1 border-b-[#E4E4E7]">
       <div className="flex flex-col md:flex-row gap-6">
         {/* Property Image */}
         <div className="md:w-1/3 relative">
@@ -29,7 +29,7 @@ export const ImageComponent = () => {
         {/* Property Details */}
         <div className="md:w-2/3">
           <div className="flex justify-between items-start mb-4">
-            <div>
+            <div className="flex flex-col gap-2">
               <h1 className="text-2xl font-bold">280 Richards, Brooklyn, NY</h1>
               <div className="text-gray-600 text-sm">
                 Date Uploaded: 11/06/2024
@@ -37,17 +37,17 @@ export const ImageComponent = () => {
               <div className="text-gray-700 mb-4">Warehouse</div>
             </div>
             <div className="flex flex-col gap-2">
-              <button className="bg-black text-white px-4 py-2 rounded text-sm">
+              <button className="bg-black text-white px-4 py-1 rounded-md text-sm">
                 Export to Excel
               </button>
-              <button className="bg-black text-white px-4 py-2 rounded text-sm">
+              <button className="bg-black text-white px-4 py-1 rounded-md text-sm">
                 Generate PowerPoint
               </button>
             </div>
           </div>
 
           {/* Property Stats with Headers */}
-          <div className="border border-gray-200 rounded p-2 mb-4">
+          <div className=" p-2 mb-4">
             <div className="flex justify-between items-start">
               {statItems.map((item, index) => (
                 <div key={index} className="flex flex-col items-center text-center px-2">

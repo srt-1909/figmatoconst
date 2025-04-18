@@ -42,12 +42,12 @@ export default function Header1() {
           alt="Starboard Logo"
           className="w-[74px] h-[46px] object-contain"
         />
-        <div className="text-right">
+        {/* <div className="text-right">
           <div className="text-xs font-semibold">Underwriting Model</div>
           <select className="mt-1 text-xs bg-gray-100 px-2 py-1 rounded focus:outline-none">
             <option>Industrial.Template.v2.4.xlsx</option>
           </select>
-        </div>
+        </div> */}
       </div>
     </div>
   );

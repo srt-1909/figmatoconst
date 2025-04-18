@@ -35,16 +35,16 @@ function MetricCard({
 }
 
 function Number() {
-  return (
-    <div className="flex items-center justify-center bg-gray-50">
+  return (<>
+    <div className="flex items-center justify-center bg-gray-50 ">
       <div
         className="bg-white rounded-xl  overflow-auto"
         style={{ width: '1448px', height: '372px' }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 p-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 p-6 ">
           {/* Projected Financial Metrics */}
-          <div className="space-y-3">
-            <h3 className="font-medium text-gray-800">Projected Financial Metrics</h3>
+          <div className="space-y-5 border-r-1 border-r-[#E4E4E7]">
+            <h3 className="text-base font-medium text-[#71717A]">Projected Financial Metrics</h3>
             <MetricCard icon={Percent} label="IRR" value="13.9%" />
             <MetricCard icon={TrendingUp} label="Equity Multiple" value="2.3x" />
             <MetricCard icon={DollarSign} label="Return on Equity" value="18.5%" />
@@ -52,8 +52,8 @@ function Number() {
           </div>
 
           {/* Key Assumptions */}
-          <div className="space-y-3">
-            <h3 className="font-medium text-gray-800">Key Assumptions</h3>
+          <div className="space-y-5 border-r-1 border-r-[#E4E4E7]">
+            <h3 className="text-base font-medium text-[#71717A]">Key Assumptions</h3>
             <MetricCard icon={DollarSign} label="Exit Price" value="$195,000,000" />
             <MetricCard icon={Percent} label="Exit Cap Rate" value="5.0%" />
             <MetricCard icon={TrendingUp} label="Rental Growth" value="3.5%" />
@@ -61,8 +61,8 @@ function Number() {
           </div>
 
           {/* Market Analysis */}
-          <div className="space-y-3">
-            <h3 className="font-medium text-gray-800">Market Analysis</h3>
+          <div className="space-y-5 border-r-1 border-r-[#E4E4E7]">
+            <h3 className="text-base font-medium text-[#71717A]">Market Analysis</h3>
             <MetricCard icon={Building2} label="Nearest Urban Center" value="Brooklyn, NY" />
             <MetricCard icon={TrendingUp} label="Population Growth Rate" value="1.2%" />
             <MetricCard icon={Users} label="Median Household Income" value="$76,912" />
@@ -70,8 +70,8 @@ function Number() {
           </div>
 
           {/* Lease Analysis */}
-          <div className="space-y-3">
-            <h3 className="font-medium text-gray-800">Lease Analysis</h3>
+          <div className="space-y-5">
+            <h3 className="text-base font-medium text-[#71717A]">Lease Analysis</h3>
             <MetricCard icon={DollarSign} label="Rent PSF" value="$24.40" />
             <MetricCard icon={Clock} label="WALT" value="13 Yrs (Sep 37)" />
             <MetricCard icon={ArrowUpRight} label="Rent Escalations" value="3%" />
@@ -80,6 +80,9 @@ function Number() {
         </div>
       </div>
     </div>
+<div className="border-1 border-[#E4E4E7] -top-6 relative"></div>
+
+    </>
   );
 }
 
