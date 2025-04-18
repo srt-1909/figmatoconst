@@ -1,12 +1,16 @@
 
 
-export default function Header() {
+interface HeaderProps {
+  title: string;
+}
+
+export default function Header({ title }: HeaderProps) {
 
 
     return(<>
     
-    <div className="flex justify-between items-center mb-12 border-b-2 border-b-[#E4E4E7] pb-4">
-          <h1 className="text-2xl font-bold text-[#09090B]">Upload New Deal</h1>
+    <div className="flex justify-between items-center mb-12 border-b-1 border-b-[#E4E4E7] pb-4">
+          <h1 className="text-2xl font-bold text-[#09090B]">{title}</h1>
           
           <div className="relative ">
             <div className="text-base  font-medium text-[#09090B] absolute -top-5 left-3">

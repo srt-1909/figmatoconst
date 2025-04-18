@@ -25,9 +25,9 @@ export default function Upload() {
     <div className="min-h-screen bg-white ">
     
 
-       <Navbar/>
+       <Navbar pageType="newmemo"  navLinks={["New Upload", "Pipeline", "Settings"]}/>
       <div className="px-8 py-8">
-      <Header/>
+      <Header title="Upload New Deal"/>
 
         
   {isLoading? ( <div className="flex items-center flex-col justify-center h-96 bg-white">

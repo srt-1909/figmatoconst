@@ -21,7 +21,7 @@ interface ComparableData {
 }
 
 const SupplyItem = ({ data }: { data: SupplyData }) => (
-  <div className="w-[30%] flex">
+  <div className="w-[30%] flex border-r-1 border-r-[#E4E4E7]">
     <div className="flex space-x-4">
       <img
         src={data.image}
@@ -128,17 +128,20 @@ export default function SupplyPipeline() {
   ];
 
   return (
-    <div className="flex flex-col space-y-6 w-[1448px] h-[468px] overflow-hidden">
+    <div className="flex flex-col space-y-6  overflow-hidden  ">
       {/* Header */}
-      <div className="flex w-full border-b pb-2">
-        <div className="w-[30%] font-bold text-xl">Supply Pipeline</div>
+      
+      <div className="flex w-full ">
+        <div className="w-[30%] font-bold text-xl ">Supply Pipeline</div>
         <div className="w-[70%] font-bold text-xl">Sale Comparables</div>
       </div>
 
       {/* Rows */}
       {supplyData.map((supply, index) => (
-        <div key={index} className="flex w-full space-x-4">
+        <div key={index} className="flex w-full space-x-4 ">
+          
           <SupplyItem data={supply} />
+          
           {comparableData[index].map((comp, idx) => (
             <ComparableItem key={idx} data={comp} />
           ))}
